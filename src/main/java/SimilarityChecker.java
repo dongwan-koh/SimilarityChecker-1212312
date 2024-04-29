@@ -16,8 +16,7 @@ public class SimilarityChecker {
     }
 
     private int getPartialPoint(int maxLen, int minLen) {
-        double gap = (double) (maxLen - minLen) /minLen;
-        return (int)((1-gap) * 60);
+        return (int)((1- (double) (maxLen - minLen) /minLen) * 60);
     }
 
     private boolean isTwiceDiff(String input1, String input2) {
